@@ -343,7 +343,7 @@ module ActionView
           #   page.replace_html 'person-45', :partial => 'person', :object => @person
           #
           def replace_html(id, *options_for_render)
-            call "jQuery('#{jquery_id(id)}').html", id, render(*options_for_render)
+            call "jQuery('#{jquery_id(id)}').html", render(*options_for_render)
           end
 
           # Replaces the "outer HTML" (i.e., the entire element, not just its
